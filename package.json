@@ -51,5 +51,8 @@
         "*.{js,jsx,ts,tsx,html,css,json,md,yaml,yml}": [
             "prettier --write --ignore-unknown"
         ]
+    },
+    "engines": {
+        "node": ">=8.0.0 <11.0.0"
     }
 }
