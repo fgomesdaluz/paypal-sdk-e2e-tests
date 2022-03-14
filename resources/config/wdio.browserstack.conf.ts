@@ -11,7 +11,7 @@ const overrides = {
     key: process.env.BROWSERSTACK_ACCESS_KEY,
     specs: ["tests/**/*.test.ts"],
     host: "hub.browserstack.com",
-    maxInstances: 15,
+    maxInstances: 8,
     baseUrl: "https://developer.paypal.com",
     commonCapabilities: {
         "browserstack.maskCommands":
