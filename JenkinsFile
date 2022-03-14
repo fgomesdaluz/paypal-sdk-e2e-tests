@@ -15,7 +15,11 @@ node {
                 ],
                 description: 'Select the test you would like to run',
                 editable: false,
-                name: 'TEST_TYPE']
+                name: 'TEST_TYPE'
+                ],
+                description: 'Select the URL you would like to run against',
+                editable: false,
+                name: 'TEST_URL']
             ])
         ])
 
@@ -24,7 +28,7 @@ node {
                     dir('test') {
                     sh label: '', returnStatus: true, script: '''#!/bin/bash -l
                                                                 npm install
-                                                                npm run ${TEST_TYPE}
+                                                                npm run ${TEST_TYPE} ${TEST_URL}
                                                                 '''
                     }
         }
@@ -62,7 +66,7 @@ node {
                     dir('test') {
                     sh label: '', returnStatus: true, script: '''#!/bin/bash -l
                                                                 npm install
-                                                                npm run ${TEST_TYPE}
+                                                                npm run ${TEST_TYPE} ${TEST_URL}
                                                                 '''
                     }
                 }
